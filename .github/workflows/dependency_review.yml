@@ -1,0 +1,17 @@
+name: "Dependency Review"
+
+on:
+  pull_request_target:
+
+jobs:
+  dependency-review:
+    name: "Dependency Review"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: "Run Dependency Review"
+        uses: actions/dependency-review-action@v4
+        with:
+          fail-on-severity: "high"
+          output-type: "github-comment"
