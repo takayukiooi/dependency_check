@@ -13,5 +13,5 @@ jobs:
       - name: "Run Dependency Review"
         uses: actions/dependency-review-action@v4
         with:
-          fail-on-severity: "high"
-          output-type: "github-comment"
+          fail-on-severity: "moderate"
+          comment-summary-in-pr: always
